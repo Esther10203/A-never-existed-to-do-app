@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card shadow-sm center p-3 mb-5 bg-body rounded" style="width: 70%;">
+   <p class="h3">View all tasks</p>
+   <div class="list-group">
+      {% for object in post_list %}
+      <label class="list-group-item">
+      <a href="{% url 'task_detail' object.id %}" ><input class="form-check-input me-1" type="checkbox" value="">
+      {{object.title}} 
+      </label></a>
+      {% endfor %}
+   </div>
+</div>
+{% endblock %}

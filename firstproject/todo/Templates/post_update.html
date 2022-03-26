@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card text-center shadow-sm mb-5 bg-body rounded w-50 mx-5 mt-5" style="margin: auto;">
+   <div class="card-header">
+       Update your list!
+   </div>
+   <div class="card-body">
+      <form method="post">
+         {% csrf_token %}
+         {{form.as_p}}
+         <button type="submit" class="btn btn-success">Update Todo</button>
+      </form>
+   </div>
+</div>
+{% endblock %}
